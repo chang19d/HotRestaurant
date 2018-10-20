@@ -33,13 +33,18 @@ app.get("/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-app.get("/api/waitlist", function(req, res) {
-    return res.json(waitlist);
-});
+function getWaitlist(){
+    app.get("/api/waitlist", function(req, res) {
+        return res.json(characters);
+    });
+}
 
-app.get("/api/reserved", function(req, res) {
-    return res.json(tables);
-});
+function getReservations(){
+    app.get("/api/reserved", function(req, res) {
+        return res.json(characters);
+    });
+}
+
 
 
 //TABLES RESERVATIONS ARRAY
