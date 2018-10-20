@@ -34,11 +34,11 @@ app.get("/reserve", function(req, res) {
 });
 
 app.get("/api/waitlist", function(req, res) {
-    return res.json(characters);
+    return res.json(waitlist);
 });
 
 app.get("/api/reserved", function(req, res) {
-    return res.json(characters);
+    return res.json(tables);
 });
 
 
