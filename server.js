@@ -17,4 +17,24 @@ app.use(express.json());
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
+
+//TABLES RESERVATIONS ARRAY
+var tables = [
+    {
+        id: 1234,
+        name: "bobby",
+        email: "bobby@bobby.com",
+        phone: "9104325193"
+    },
+];
+
+//WAITLIST ARRAY
+var waitlist = [
+    {
+        id: 5678,
+        name: "Dad",
+        email: "dobby@bobby.com",
+        phone: "9394848582"
+    },
+];
   
