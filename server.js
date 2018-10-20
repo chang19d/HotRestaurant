@@ -18,7 +18,6 @@ app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
   
-
 app.get("/", function(req, res) {
 // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "home.html"));
@@ -41,3 +40,25 @@ app.get("/api/waitlist", function(req, res) {
 app.get("/api/reserved", function(req, res) {
     return res.json(characters);
 });
+
+
+//TABLES RESERVATIONS ARRAY
+var tables = [
+    {
+        id: 1234,
+        name: "bobby",
+        email: "bobby@bobby.com",
+        phone: "9104325193"
+    },
+];
+
+//WAITLIST ARRAY
+var waitlist = [
+    {
+        id: 5678,
+        name: "Dad",
+        email: "dobby@bobby.com",
+        phone: "9394848582"
+    },
+];
+  
