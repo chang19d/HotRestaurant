@@ -35,13 +35,13 @@ app.get("/reserve", function(req, res) {
 
 function getWaitlist(){
     app.get("/api/waitlist", function(req, res) {
-        return res.json(characters);
+        return res.json(waitlist);
     });
 }
 
 function getReservations(){
     app.get("/api/reserved", function(req, res) {
-        return res.json(characters);
+        return res.json(tables);
     });
 }
 
