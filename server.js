@@ -37,14 +37,9 @@ app.get("/api/waitlist", function(req, res) {
     return res.json(characters);
 });
 
-
-
 app.get("/api/reserved", function(req, res) {
     return res.json(tables);
 });
-
-
-
 
 //TABLES RESERVATIONS ARRAY
 var tables = [
