@@ -44,34 +44,34 @@ app.get("/reserve", function(req, res) {
 });
 
 app.get("/api/waitlist", function(req, res) {
-    return res.json(characters);
+    return res.json(waitlist);
 });
 
 app.get("/api/reserved", function(req, res) {
-    return res.json(characters);
+    return res.json(reserved);
 });
 
 //POSTING STUFFS
-    var tablesFull = false;
-    app.get("/api/reserved", function(req, res) {
-        if(res.tables.length > 5){
-            tablesFull = true;
-        }else{
-            tablesFull = false;
-        }
-    });
-    app.post("/api/waitlist", function(req, res) {
-        // req.body hosts is equal to the JSON post sent from the user
-        // This works because of our body parsing middleware
-        var newReservation = req.body;
-        console.log(newReservation);
-        if(tablesFull){
-            // We then add the json the user sent to the character array
-            waitlist.push(newReservation);
-        }else{
-            tables.push(newReservation);
-        }
-    });
+var tablesFull = false;
+app.get("/api/reserved", function(req, res) {
+    if(res.tables.length > 5){
+        tablesFull = true;
+    }else{
+        tablesFull = false;
+    }
+});
+app.post("/api/waitlist", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var newReservation = req.body;
+    console.log(newReservation);
+    if(tablesFull){
+        // We then add the json the user sent to the character array
+        waitlist.push(newReservation);
+    }else{
+        tables.push(newReservation);
+    }
+});
 //---------------------------------------------------
 
 //tables.html script
