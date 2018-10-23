@@ -33,14 +33,22 @@ app.get("/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
+<<<<<<< HEAD
 app.get("/api/waitlist", function(req, res) {
     return res.json(characters);
 });
 
+=======
+function getWaitlist(){
+    app.get("/api/waitlist", function(req, res) {
+        return res.json(waitlist);
+    });
+}
+>>>>>>> 4f06cb495d12a506fa79cf44d08228d9f86cca88
 
 function getReservations(){
     app.get("/api/reserved", function(req, res) {
-        return res.json(characters);
+        return res.json(tables);
     });
 }
 
